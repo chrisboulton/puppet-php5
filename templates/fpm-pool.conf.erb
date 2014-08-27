@@ -14,12 +14,12 @@ pm.max_requests = <% if @pm_max_requests %><%= @pm_max_requests %><% else %>0<% 
 <% @env.each do |k, v| %>
 	env[<%= k %>] = <%= v %>
 <% end %>
-<% @php_values.each do |k, v| %>
+<% @php_values.sort.each do |k, v| %>
 	php_value[<%= k %>] = <%= v %>
 <% end %>
-<% @php_admin_values.each do |k, v| %>
+<% @php_admin_values.sort.each do |k, v| %>
 	php_admin_value[<%= k %>] = <%= v %>
 <% end %>
-<% @misc_options.each do |k, v| %>
+<% @misc_options.sort.each do |k, v| %>
 	<%= k %> = <%= v %>
 <% end %>
