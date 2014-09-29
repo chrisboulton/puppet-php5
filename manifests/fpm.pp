@@ -42,7 +42,7 @@ class php5::fpm($version = 'installed', $config_source = 'puppet:///modules/php5
 
 	file { '/etc/php5/fpm/php5-fpm.conf':
 		ensure => 'link',
-		target => '/etc/php5/fpm/php5-fpm.conf',
+		target => '/etc/php5/fpm/php-fpm.conf',
 	}
 
 	file { '/etc/php5/fpm/php-fpm.conf':
