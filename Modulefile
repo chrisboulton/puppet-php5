@@ -1,5 +1,5 @@
 name         'chrisboulton-php5'
-version      '0.0.1'
+version      '1.0.0'
 license      'MIT'
 summary      'Install and manage PHP'
 author       'Chris Boulton <chris@chrisboulton.com>'
