@@ -4,7 +4,6 @@ class php5 {
 	}
 
 	package { [
-		'php5-suhosin',
 		'php5-pspell',
 		'php5-mysql',
 		'php5-memcache',
@@ -17,6 +16,13 @@ class php5 {
 	]:
 		ensure  => 'present',
 		require => Package['php5-common'],
+	}
+
+	if ($::lsbdistcodename == 'squeeze') {
+		package { 'php5-suhosin':
+			ensure  => 'present',
+			require => Package['php5-common'],
+		}
 	}
 
 	file { '/etc/php5/conf.d/zzz_common.ini':
